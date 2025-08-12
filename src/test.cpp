@@ -49,3 +49,27 @@ void testBrackCheck(){
     else
         std::cout << "匹配失败" << "\n";
 }
+
+void testSqList() {
+    sqlist::SqList L;
+    sqlist::InitSqList(L);
+    
+    // 手动添加数据
+    L.data[0] = 10;
+    L.data[1] = 20;
+    L.data[2] = 5;
+    L.data[3] = 30;
+    L.data[4] = 15;
+    L.length = 5; // 设置顺序表长度为5
+    
+    std::cout << "顺序表内容: " << L << std::endl;
+    
+    // 测试删除最小值
+    sqlist::ElemType minVal;
+    if (sqlist::Del_Min(L, minVal)) {
+        std::cout << "删除的最小值: " << minVal << std::endl;
+        std::cout << "删除后的顺序表: " << L << std::endl;
+    } else {
+        std::cout << "顺序表为空，删除失败" << std::endl;
+    }
+}
