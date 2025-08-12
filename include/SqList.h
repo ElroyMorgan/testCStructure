@@ -15,6 +15,9 @@ namespace sqlist{
     }SqList;
     void InitSqList(SqList& L);
     bool Del_Min(SqList& L,ElemType& del);
+    void Reverse(SqList& L);
+    bool Del_allX_method1(SqList& L,ElemType x);
+    bool Del_allX_method2(SqList& L,ElemType x);
 }
 
 #endif

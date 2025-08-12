@@ -60,7 +60,10 @@ void testSqList() {
     L.data[2] = 5;
     L.data[3] = 30;
     L.data[4] = 15;
-    L.length = 5; // 设置顺序表长度为5
+    L.data[5] = 15;
+    L.data[6] = 24;
+    L.data[7] = 10;
+    L.length = 8; // 设置顺序表长度为5
     
     std::cout << "顺序表内容: " << L << std::endl;
     
@@ -72,4 +75,10 @@ void testSqList() {
     } else {
         std::cout << "顺序表为空，删除失败" << std::endl;
     }
+    sqlist::Reverse(L);
+    std::cout << "逆序排列" << L <<"\n"; 
+    sqlist::Del_allX_method1(L,15);
+    std::cout << "删除所有15（使用method1）：" << L <<"\n"; 
+    sqlist::Del_allX_method2(L,10);
+    std::cout << "删除所有10（使用method2）：" << L <<"\n"; 
 }
