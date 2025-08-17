@@ -4,5 +4,6 @@ int main(){
     //testLinkQueue();
     //testStack();
     //testBrackCheck();
-    testSqList();
+    //testSqList();
+    test_inifx_to_postifix();
 }

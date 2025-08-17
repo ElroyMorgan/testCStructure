@@ -33,9 +33,20 @@ void testStack(){
     Push(S,'c');
     std::cout <<S.data[0]<<"\n";
     std::cout << S.top <<"\n";
+    std::cout << "-----------------" <<"\n";
+    std::cout << "peek" <<"\n";
+    char temp;
+    Peek(S,temp);
+    std::cout << temp <<"\n";
+    std::cout << "-----------------" <<"\n";
     Push(S,'M');
     std::cout << S.data[1] <<"\n";
     std::cout << S.top <<"\n";
+
+    std::cout << "peek" <<"\n";
+    Peek(S,temp);
+    std::cout << temp <<"\n";
+    std::cout << "-----------------" <<"\n";
     char x;
     Pop(S,x);
     std::cout << S.top <<"\n";
@@ -81,4 +92,10 @@ void testSqList() {
     std::cout << "删除所有15（使用method1）：" << L <<"\n"; 
     sqlist::Del_allX_method2(L,10);
     std::cout << "删除所有10（使用method2）：" << L <<"\n"; 
+}
+
+void test_inifx_to_postifix(){
+    std::string postifix{"A*B-C/D"};
+    auto result=inifx_to_postifix(postifix);
+    std::cout << result << "\n";
 }
