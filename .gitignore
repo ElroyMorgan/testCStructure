@@ -14,3 +14,7 @@ bin/
 *.o
 *.a
 *.out
+
+.lingma/
+
+.lingma/rules

@@ -1,22 +1,16 @@
-#include "../include/test.h"
 #include <iostream>
 #include <stack>
 #include <string>
 
-// 声明示例函数
+// 函数声明
 void demonstrate_std_stack();
 void demonstrate_string_stack();
 void demonstrate_stack_comparison();
 
-int main(){
-    std::cout<< "hello 世界!\n";
-    //testLinkQueue();
-    //testStack();
-    //testBrackCheck();
-    //testSqList();
-    test_inifx_to_postifix();
+int main() {
+    std::cout << "C++ 标准库 std::stack 使用示例" << std::endl;
+    std::cout << "================================" << std::endl << std::endl;
     
-    // 运行示例
     demonstrate_std_stack();
     demonstrate_string_stack();
     demonstrate_stack_comparison();
@@ -24,7 +18,7 @@ int main(){
     return 0;
 }
 
-// 添加 std::stack 示例函数的实现
+// 演示 std::stack 基本用法的示例
 void demonstrate_std_stack() {
     std::cout << "=== std::stack 基本用法演示 ===" << std::endl;
     
@@ -65,6 +59,7 @@ void demonstrate_std_stack() {
     std::cout << std::endl;
 }
 
+// 演示字符串栈的使用
 void demonstrate_string_stack() {
     std::cout << "=== 字符串栈演示 ===" << std::endl;
     
@@ -83,6 +78,7 @@ void demonstrate_string_stack() {
     std::cout << std::endl << std::endl;
 }
 
+// 演示栈的比较操作
 void demonstrate_stack_comparison() {
     std::cout << "=== 栈比较操作演示 ===" << std::endl;
     

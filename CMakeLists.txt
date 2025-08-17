@@ -1,15 +1,26 @@
-cmake_minimum_required(VERSION 3.28.3)
-project(CStructure)
+cmake_minimum_required(VERSION 4.1)
+project(TestCStructure)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 自动查找所有 cpp 文件
-file(GLOB SOURCES "src/*.cpp")
-
-# 将编译后的程序放在bin目录
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-
-# 添加include目录
+# 包含目录
 include_directories(include)
 
-add_executable(CStructure ${SOURCES})
+# 明确指定需要编译的源文件，排除会导致冲突的文件
+set(MAIN_SOURCES 
+    src/main.cpp
+    src/LinkQueue.cpp
+    src/SqList.cpp
+    src/stack.cpp
+    src/test.cpp
+)
+
+# 创建主可执行文件
+add_executable(main ${MAIN_SOURCES})
+
+# 创建独立的std::stack示例可执行文件
+add_executable(stack_example src/stack_std_main.cpp)
+
+# 如果只想编译特定的源文件组合，可以使用下面的命令
+# add_executable(main src/main.cpp src/LinkQueue.cpp src/SqList.cpp src/stack.cpp src/test.cpp)
